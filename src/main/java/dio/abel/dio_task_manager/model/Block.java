@@ -25,6 +25,7 @@ public class Block {
     @Column(length = 255)
     private String  unblockCause;
     private OffsetDateTime unblockIn;
+    private boolean deleted = false;
 
     @ManyToOne
     @JoinColumn(name = "card_id", nullable = false)
