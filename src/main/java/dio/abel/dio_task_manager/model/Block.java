@@ -21,6 +21,7 @@ public class Block {
     @Column(nullable = false, length = 255)
     private String  blockCause;
     private OffsetDateTime blockIn;
+    private boolean locked = true;
     @Column(length = 255)
     private String  unblockCause;
     private OffsetDateTime unblockIn;
