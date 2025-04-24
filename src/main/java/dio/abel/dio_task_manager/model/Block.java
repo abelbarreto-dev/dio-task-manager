@@ -19,7 +19,7 @@ public class Block {
     private Long id;
 
     @Column(nullable = false, length = 255)
-    private String  blockCause;]
+    private String  blockCause;
     private OffsetDateTime blockIn;
     @Column(length = 255)
     private String  unblockCause;
