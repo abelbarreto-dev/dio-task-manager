@@ -1,5 +1,6 @@
 package dio.abel.dio_task_manager.model;
 
+import dio.abel.dio_task_manager.enums.TypeColumnEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,7 +22,8 @@ public class BoardColumn {
     @Column(nullable = false, length = 100)
     private String name;
     @Column(nullable = false, length = 100)
-    private String kind;
+    @Enumerated(EnumType.ORDINAL)
+    private TypeColumnEnum kind;
     private int order;
 
     @ManyToOne
