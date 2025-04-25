@@ -21,7 +21,7 @@ public class BoardColumn {
 
     @Column(nullable = false, length = 100)
     private String name;
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false)
     @Enumerated(EnumType.ORDINAL)
     private TypeColumnEnum kind;
     private int order;
@@ -30,6 +30,6 @@ public class BoardColumn {
     @JoinColumn(name = "board_id", nullable = false)
     private Board board;
 
-    @OneToMany(mappedBy = "card", cascade = CascadeType.REFRESH)
+    @OneToMany(mappedBy = "column", cascade = CascadeType.REFRESH)
     private List<Card> cards;
 }

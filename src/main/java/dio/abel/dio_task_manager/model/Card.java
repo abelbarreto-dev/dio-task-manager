@@ -28,9 +28,9 @@ public class Card {
     private OffsetDateTime createdAt;
 
     @ManyToOne
-    @JoinColumn(name = "board_column_id", nullable = false)
+    @JoinColumn(name = "column_id", nullable = false)
     private BoardColumn column;
 
-    @OneToMany(mappedBy = "block_id", cascade = CascadeType.REFRESH)
-    private List<Block> cards;
+    @OneToMany(mappedBy = "card", cascade = CascadeType.REFRESH)
+    private List<Block> blocks;
 }
