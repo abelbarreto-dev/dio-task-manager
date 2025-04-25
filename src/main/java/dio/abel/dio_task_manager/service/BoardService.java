@@ -35,7 +35,7 @@ public class BoardService implements IBoardService {
         cancelling.setOrder(2);
         cancelling.setKind(TypeColumnEnum.CANCELLING);
 
-        finalColumn.setName("Final");
+        finalColumn.setName("Finished");
         finalColumn.setOrder(3);
         finalColumn.setKind(TypeColumnEnum.FINAL);
 
